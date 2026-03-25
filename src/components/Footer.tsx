@@ -67,6 +67,8 @@ export default function Footer() {
               <img 
                 src="/lovable-uploads/logo.png" 
                 alt="Hartscapes Logo" 
+                loading="lazy"
+                decoding="async"
                 className="h-16 w-auto" 
               />
             </div>

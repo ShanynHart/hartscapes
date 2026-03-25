@@ -32,7 +32,7 @@ export default function ServicesThumbs({ folder }: Props) {
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-4">
         {thumbs.map((img, i) => (
           <div key={i} className="aspect-[5/4] overflow-hidden rounded-lg">
-            <img src={img} alt={`${folder} thumb ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+            <img src={img} alt={`${folder} thumb ${i + 1}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
           </div>
         ))}
       </div>

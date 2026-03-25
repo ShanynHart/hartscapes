@@ -59,7 +59,14 @@ export default function ServiceGallery({ galleries }: ServiceGalleryProps) {
               transition={{ delay: i * 0.1 }}
               className="overflow-hidden rounded-lg shadow-lg"
             >
-              <img src={img} alt={`${service.title} ${i + 1}`} className="w-full h-full object-cover" />
+              <img
+                src={img}
+                alt={`${service.title} ${i + 1}`}
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={i === 0 ? "high" : "auto"}
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           ))}
         </div>

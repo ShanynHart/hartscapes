@@ -94,6 +94,8 @@ export default function Navbar() {
           <img 
             src="/lovable-uploads/logo.png" 
             alt="Hartscapes Logo" 
+            loading="eager"
+            decoding="async"
             className="h-24 w-auto" 
           />
         </a>

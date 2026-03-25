@@ -100,6 +100,9 @@ export default function AboutSection() {
                       <img 
                         src={image.src} 
                         alt={image.alt}
+                        loading={image.id === 1 ? "eager" : "lazy"}
+                        decoding="async"
+                        fetchPriority={image.id === 1 ? "high" : "auto"}
                         className="w-full h-full object-cover"
                       />
                     </CarouselItem>
@@ -161,6 +164,8 @@ export default function AboutSection() {
                   <img 
                     src="/gallery/team2.png" 
                     alt="The Hartscapes Team" 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </motion.div>

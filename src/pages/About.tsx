@@ -119,6 +119,7 @@ const About = () => {
                   alt="Hartscapes team"
                   className="w-full h-auto object-contain"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </motion.div>

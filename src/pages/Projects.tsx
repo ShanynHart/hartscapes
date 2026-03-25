@@ -295,7 +295,9 @@ export default function Projects() {
                                     <img 
                                       src={image} 
                                       alt={`${activeProject.title} - Image ${i+1}`} 
-                                      loading="lazy"
+                                      loading={i === 0 ? "eager" : "lazy"}
+                                      decoding="async"
+                                      fetchPriority={i === 0 ? "high" : "auto"}
                                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                                     />
                                   </div>

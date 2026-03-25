@@ -128,6 +128,9 @@ export default function ProjectsSection() {
                 <img 
                   src={project.imageUrl} 
                   alt={project.title}
+                  loading={idx <= 1 ? "eager" : "lazy"}
+                  decoding="async"
+                  fetchPriority={idx === 0 ? "high" : "auto"}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 
