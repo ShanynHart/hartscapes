@@ -39,6 +39,8 @@ export default function Projects() {
     "Blouberg",
     "Capri",
     "Claremont",
+    "HarfieldVillage",
+    "Kenilworth",
     "Hout Bay",
     "Kalk Bay",
     "Newlands",

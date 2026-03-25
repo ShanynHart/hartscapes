@@ -57,7 +57,7 @@ export default function AboutSection() {
     "Reliable timelines with respectful site teams."
   ];
 
-  const beforeAfterImages = Array.from({ length: 25 }, (_, i) => ({
+  const beforeAfterImages = Array.from({ length: 27 }, (_, i) => ({
     id: i + 1,
     src: `/gallery/BeforeAfter/${i + 1}.png`,
     alt: `Transformation ${i + 1}`

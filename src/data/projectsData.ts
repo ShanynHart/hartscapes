@@ -23,11 +23,7 @@ Freshly repaved pool surrounds matched with premium ceramic outdoor tiling in th
   },
   "Blouberg": {
     title: "Blouberg",
-    description: `🌿✨ From Tired to Transformed! ✨🌿
-
-Scroll through to see the before photos!
-
-We recently refreshed this outdoor space into a clean, modern, low-maintenance garden with added texture, contrast, and lush new greenery.
+    description: `We recently refreshed this outdoor space into a clean, modern, low-maintenance garden with added texture, contrast, and lush new greenery.
 
 ✓ New planting with a blend of structural and soft landscaping
 ✓ Fresh mulch and soil conditioning for healthy growth
@@ -40,9 +36,7 @@ Thinking about giving your garden a fresh new look—big or small? We'd love to 
   },
   "Newlands": {
     title: "Newlands",
-    description: `What a glow-up! ✨
-
-This garden went from bare and building-site to lush and inviting.
+    description: `This garden went from bare and building-site to lush and inviting.
 
 We brought it all together with:
 
@@ -55,11 +49,35 @@ We brought it all together with:
 Now it's the perfect space for a morning coffee, family braais, or just soaking up the view. Another Hartscapes project where hard work meets heart. 💚`,
     location: "Cape Town",
   },
+  "HarfieldVillage": {
+    title: "Harfield Village",
+    description: `A clean and character-filled transformation in Harfield Village.
+
+We brought this space to life with:
+
+✓ Klompie brick installation for timeless texture and warmth
+✓ Fresh planting to soften edges and create layered greenery
+
+The result is a practical, welcoming outdoor area with classic charm and healthy new growth.`,
+    location: "Cape Town",
+  },
+  "Kenilworth": {
+    title: "Kenilworth",
+    description: `A stylish outdoor upgrade in Kenilworth, designed for both entertaining and everyday living.
+
+This project included:
+
+✓ Pergola installation for structured shade and comfort
+✓ A built-in pizza oven for relaxed outdoor hosting
+✓ Fresh planting to neaten and soften the garden
+✓ New paving to improve flow and create a clean, finished look
+
+The result is a neat, practical, and inviting garden space the family can enjoy year-round.`,
+    location: "Cape Town",
+  },
   "Somerset West": {
     title: "Somerset West",
-    description: `🌟 Backyard Glow-Up Alert! 🌟
-
-We transformed this ordinary grassy patch into a stunning, low-maintenance gravel retreat featuring sleek grey walls, vibrant blooms, and ample space to unwind - ask our furry supervisor 😻.
+    description: `We transformed this ordinary grassy patch into a stunning, low-maintenance gravel retreat featuring sleek grey walls, vibrant blooms, and ample space to unwind - ask our furry supervisor 😻.
 
 At Hartscapes Landscaping, we design spaces tailored to your lifestyle. We can't wait to see how these plants fill in and flourish in just a few weeks!`,
     location: "Cape Town",
@@ -81,9 +99,7 @@ Whether you're looking to upgrade your outdoor living space or need a complete g
   },
   "Claremont": {
     title: "Claremont",
-    description: `Making an Entrance ✨
-
-A garden should start the moment you pull into the driveway. This Claremont project was all about combining hardscaping with natural beauty.
+    description: `A garden should start the moment you pull into the driveway. This Claremont project was all about combining hardscaping with natural beauty.
 
 We brought this space together with:
 
@@ -96,9 +112,7 @@ One year on, and the balance between the structure and the greenery is just perf
   },
   "Kalk Bay": {
     title: "Kalk Bay",
-    description: `Leveling Up! 🧗‍♂️➡️🏡
-
-Check out this massive tiered transformation! We restructured the existing walls to create more usable space and a much cleaner aesthetic.
+    description: `Check out this massive tiered transformation! We restructured the existing walls to create more usable space and a much cleaner aesthetic.
 
 Front: Lowered for a better view from the pool.
 
@@ -109,9 +123,7 @@ Top: Gravel area ready for entertaining.`,
   },
   "Wynberg": {
     title: "Wynberg",
-    description: `🛠️🍃 Project Spotlight: Wynberg Drainage Restoration 🛠️🍃
-
-A beautiful garden starts from the ground up—literally.
+    description: `A beautiful garden starts from the ground up—literally.
 
 At this Wynberg property, our main priority was resolving a saturated water table. By implementing a custom drainage system and tank installation, we redirected the excess water to ensure the soil remains healthy and the lawn stays firm.
 
@@ -127,9 +139,7 @@ Services provided:
   },
   "Hout Bay": {
     title: "Hout Bay",
-    description: `🌳 Reaching New Heights! 🌳
-
-This Hout Bay property had serious potential—just hidden under slopes and unused angles. We transformed a challenging hillside into a multi-functional paradise.
+    description: `This Hout Bay property had serious potential—just hidden under slopes and unused angles. We transformed a challenging hillside into a multi-functional paradise.
 
 What we created:
 

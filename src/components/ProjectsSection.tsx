@@ -21,7 +21,7 @@ export default function ProjectsSection() {
   const { scrollXProgress } = useScroll({ container: scrollRef });
   const scaleX = useSpring(scrollXProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
-  const galleryFolders = ["Wynberg", "Hout Bay", "Somerset West", "Newlands", "Capri", "Claremont"];
+  const galleryFolders = ["Wynberg", "Hout Bay", "Somerset West", "Newlands", "HarfieldVillage", "Kenilworth", "Capri", "Claremont"];
 
   useEffect(() => {
     let mounted = true;
