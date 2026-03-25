@@ -35,14 +35,14 @@ export default function Projects() {
 
   // The canonical order of project folders to show (matches folders under public/gallery).
   const galleryFolders = [
-    "Edgemead",
     "Blouberg",
     "Capri",
     "Claremont",
+    "Edgemead",
     "HarfieldVillage",
-    "Kenilworth",
     "Hout Bay",
     "Kalk Bay",
+    "Kenilworth",
     "Newlands",
     "Somerset West",
     "Wynberg"
@@ -285,20 +285,20 @@ export default function Projects() {
                       </div>
                       
                       {/* Image Gallery Carousel */}
-                      <div className="relative w-full" ref={carouselRef}>
+                      <div className="relative w-full max-w-6xl mx-auto" ref={carouselRef}>
                         <div className="bg-card/30 backdrop-blur-sm rounded-2xl border shadow-2xl overflow-hidden">
                           <Carousel className="w-full">
                             <CarouselContent>
                               {activeProject.gallery.map((image, i) => (
                                 <CarouselItem key={i}>
-                                  <div className="aspect-[16/10] overflow-hidden">
+                                  <div className="h-[42vh] sm:h-[50vh] md:h-[58vh] lg:h-[64vh] overflow-hidden bg-muted/20">
                                     <img 
                                       src={image} 
                                       alt={`${activeProject.title} - Image ${i+1}`} 
                                       loading={i === 0 ? "eager" : "lazy"}
                                       decoding="async"
                                       fetchPriority={i === 0 ? "high" : "auto"}
-                                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-[1.02]"
                                     />
                                   </div>
                                 </CarouselItem>
