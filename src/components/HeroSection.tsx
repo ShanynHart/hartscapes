@@ -9,6 +9,9 @@ export default function HeroSection() {
   const navigate = useNavigate();
   
   useEffect(() => {
+    const isFinePointer = window.matchMedia('(pointer: fine)').matches;
+    if (!isFinePointer) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       if (heroRef.current) {
         const { clientX, clientY } = e;
@@ -46,7 +49,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 z-10 mt-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-float mb-4 inline-block">
-            <div className="bg-primary/10 text-primary px-4 py-2 rounded-full inline-flex items-center gap-2">
+            <div className="bg-primary/10 text-primary px-4 py-2 rounded-full inline-flex items-center gap-2 shadow-sm">
               <Leaf size={16} className="animate-leaf-wave" />
               <span>Premier Landscaping in South Africa</span>
             </div>
@@ -75,7 +78,7 @@ export default function HeroSection() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
-              className="bg-primary hover:bg-primary/90 text-xl text-primary-foreground px-8 py-6 h-auto"
+              className="bg-primary hover:bg-primary/90 text-lg md:text-xl text-primary-foreground px-8 py-6 h-auto"
               style={{ 
                 transform: `translate(calc(var(--x-pos) * 0.1), calc(var(--y-pos) * 0.1))`,
                 transition: 'transform 0.1s ease-out'
@@ -89,7 +92,7 @@ export default function HeroSection() {
             </Button>
             <Button 
               variant="outline" 
-              className="bg-background/50 backdrop-blur-sm border-primary/20 text-foreground hover:bg-primary/10 text-xl px-8 py-6 h-auto"
+              className="bg-background/50 backdrop-blur-sm border-primary/20 text-foreground hover:bg-primary/10 text-lg md:text-xl px-8 py-6 h-auto"
               style={{ 
                 transform: `translate(calc(var(--x-pos) * 0.05), calc(var(--y-pos) * 0.05))`,
                 transition: 'transform 0.1s ease-out'
@@ -98,6 +101,18 @@ export default function HeroSection() {
             >
               View Our Projects
             </Button>
+          </div>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs sm:text-sm">
+            <span className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-border/70 text-foreground/80 shadow-sm">
+              Owner-run in Cape Town
+            </span>
+            <span className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-border/70 text-foreground/80 shadow-sm">
+              25+ years experience
+            </span>
+            <span className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-border/70 text-foreground/80 shadow-sm">
+              Southern Suburbs &amp; Deep South
+            </span>
           </div>
         </div>
       </div>

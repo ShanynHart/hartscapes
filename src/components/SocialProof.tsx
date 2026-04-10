@@ -10,13 +10,13 @@ export default function SocialProof() {
     },
     {
       icon: <Star className="h-8 w-8" />,
-      title: "5.0 Rating",
-      description: "Customer Reviews"
+      title: "Owner-Run",
+      description: "Led by Dee Hart"
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "Fully Insured",
-      description: "Licensed & Bonded"
+      title: "Cape Town Based",
+      description: "Southern Suburbs & Deep South"
     },
     {
       icon: <Clock className="h-8 w-8" />,
@@ -30,7 +30,7 @@ export default function SocialProof() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {badges.map((badge, index) => (
-            <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+            <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-border/70 bg-white/70 backdrop-blur-sm">
               <div className="flex justify-center text-primary mb-3">
                 {badge.icon}
               </div>

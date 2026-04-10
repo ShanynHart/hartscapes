@@ -78,7 +78,7 @@ export default function AboutSection() {
   }, [api]);
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-background">
+    <section id="about" className="py-20 md:py-24 relative overflow-hidden bg-background">
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -86,14 +86,14 @@ export default function AboutSection() {
           
           {/* LEFT COLUMN: 9:16 Vertical Carousel */}
           <motion.div 
-            className="lg:col-span-5 xl:col-span-4 relative mx-auto lg:mx-0 w-full max-w-[400px] lg:max-w-none"
+            className="lg:col-span-5 xl:col-span-4 relative mx-auto lg:mx-0 w-full max-w-[340px] sm:max-w-[400px] lg:max-w-none"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             {/* Changed aspect-ratio to 9/16 */}
-            <div className="relative aspect-[9/16] rounded-[3rem] overflow-hidden shadow-2xl z-20 border-8 border-background bg-slate-50">
+            <div className="relative aspect-[9/16] rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden shadow-2xl z-20 border-4 sm:border-8 border-background bg-slate-50">
               <Carousel 
                 setApi={setApi} 
                 opts={{ loop: true }}
@@ -146,7 +146,7 @@ export default function AboutSection() {
           </motion.div>
 
           {/* RIGHT COLUMN: Content with Integrated Team Image */}
-          <div className="lg:col-span-7 xl:col-span-8 pt-4">
+          <div className="lg:col-span-7 xl:col-span-8 pt-2 md:pt-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
