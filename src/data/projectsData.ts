@@ -21,6 +21,16 @@ Freshly repaved pool surrounds matched with premium ceramic outdoor tiling in th
     location: "Cape Town",
     year: "2026",
   },
+  "FishHoek": {
+    title: "Fish Hoek",
+    description: `A curbside retaining wall designed to prevent landslide movement while creating a strong, tidy edge for the property.
+
+The build was finished with indigenous planting to soften the structure and help the site blend naturally into its surroundings.
+
+This project balances function and landscape character, protecting the verge while adding a clean, settled look to the street frontage.`,
+    location: "Fish Hoek",
+    year: "2026",
+  },
   "Blouberg": {
     title: "Blouberg",
     description: `We recently refreshed this outdoor space into a clean, modern, low-maintenance garden with added texture, contrast, and lush new greenery.

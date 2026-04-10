@@ -10,6 +10,10 @@ export default function ServiceDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
+  useEffect(() => {
     if (!slug) {
       setLoading(false);
       return;

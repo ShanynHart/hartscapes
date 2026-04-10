@@ -82,6 +82,11 @@ const testimonials = [
     quote: "The Treefelling team from Hartscape recently, came to remove a 10-12 meter tall Palm tree, they had limited space to work with and the task looked very difficult, but they did a fantastic job by not rushing and planning properly. There was no damage to anything, I am super happy with the work, would not think twice to use them again.",
     author: "Robert",
     location: "Cape Town"
+  },
+  {
+    quote: "I would like to share the best thing ever experience that I had with a landscaping company. Our front verge was a complete mess and soil falling into the road when it rains etc. 18 months after moving in it's the one area we hadn't given much attention yet. I looked around for people in my area who could assist. When I contacted Hartscapes, Dee suggested we work with what we have already (cement blocks retaining wall) and continue that look to make it uniform. We are VERY satisfied with the result. Dee and her team work in Southern Suburbs and Deep South Cape Town, not sure about Northern suburbs, but their contact details are on their Facebook page.",
+    author: "Lara",
+    location: "Fish Hoek"
   }
 ];
 

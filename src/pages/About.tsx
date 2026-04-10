@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Heart, Eye, Wrench, Leaf, Users, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -28,6 +29,19 @@ const staggerContainer = {
 const About = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    const target = window.location.hash === '#our-philosophy'
+      ? document.getElementById('our-philosophy')
+      : null;
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    window.scrollTo(0, 0);
+  }, [location.hash]);
 
   const handleContactClick = () => {
     const scrollToContact = () => {
@@ -131,7 +145,7 @@ const About = () => {
               variants={fadeIn}
               className="order-1 lg:order-2"
             >
-              <div className="inline-block mb-4">
+              <div id="our-philosophy" className="inline-block mb-4 scroll-mt-24">
                 <span className="text-sm font-semibold text-primary uppercase tracking-wider">Our Philosophy</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

@@ -43,6 +43,8 @@ export default function AboutSection() {
   const navigate = useNavigate();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  
+  const shuffleArray = <T,>(items: T[]) => [...items].sort(() => Math.random() - 0.5);
 
   const stats = [
     { icon: <Award size={18} />, value: "25+ years", label: "Experience" },
@@ -57,11 +59,15 @@ export default function AboutSection() {
     "Reliable timelines with respectful site teams."
   ];
 
-  const beforeAfterImages = Array.from({ length: 27 }, (_, i) => ({
-    id: i + 1,
-    src: `/gallery/BeforeAfter/${i + 1}.png`,
-    alt: `Transformation ${i + 1}`
-  }));
+  const beforeAfterImages = useState(() =>
+    shuffleArray(
+      Array.from({ length: 29 }, (_, i) => ({
+        id: i + 1,
+        src: `/gallery/BeforeAfter/${i + 1}.png`,
+        alt: `Transformation ${i + 1}`
+      }))
+    )
+  )[0];
 
   useEffect(() => {
     if (!api) return;
@@ -90,7 +96,7 @@ export default function AboutSection() {
             <div className="relative aspect-[9/16] rounded-[3rem] overflow-hidden shadow-2xl z-20 border-8 border-background bg-slate-50">
               <Carousel 
                 setApi={setApi} 
-                opts={{ loop: true, orientation: "vertical" }}
+                opts={{ loop: true }}
                 plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
                 className="w-full h-full"
               >
@@ -197,8 +203,7 @@ export default function AboutSection() {
                   size="lg"
                   className="rounded-full px-12 py-8 h-auto bg-primary text-white hover:scale-105 transition-all shadow-xl shadow-primary/20 shrink-0 uppercase text-[11px] font-bold tracking-widest"
                   onClick={() => {
-                    navigate('/about');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    navigate('/about#our-philosophy');
                   }}
                 >
                   Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />

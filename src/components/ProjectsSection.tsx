@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, MapPin, ArrowUpRight, Plus } from "lucide-re
 interface Project {
   id: number;
   title: string;
+  folderName: string;
   location: string;
   imageUrl: string;
   category: string;
@@ -21,7 +22,7 @@ export default function ProjectsSection() {
   const { scrollXProgress } = useScroll({ container: scrollRef });
   const scaleX = useSpring(scrollXProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
-  const galleryFolders = ["Capri", "Claremont", "HarfieldVillage", "Hout Bay", "Kenilworth", "Newlands", "Somerset West", "Wynberg"];
+  const galleryFolders = ["Capri", "Claremont", "FishHoek", "HarfieldVillage", "Hout Bay", "Kenilworth", "Newlands", "Somerset West", "Wynberg"];
 
   useEffect(() => {
     let mounted = true;
@@ -32,10 +33,12 @@ export default function ProjectsSection() {
         const built = galleryFolders.map((folderName, idx) => {
           const files = index[folderName] || [];
           const cover = files.length > 0 ? files[0] : `/gallery/${folderName}/overview1.jpg`;
+          const location = folderName === 'FishHoek' ? 'Fish Hoek' : `${folderName}, CT`;
           return {
             id: idx + 1,
             title: folderName.replace(/[-_]/g, ' '),
-            location: folderName + ', CT',
+            folderName,
+            location,
             imageUrl: cover,
             category: 'Landscape Design',
             gallery: files,
@@ -47,7 +50,8 @@ export default function ProjectsSection() {
         const fallback = galleryFolders.map((folderName, idx) => ({
           id: idx + 1,
           title: folderName.replace(/[-_]/g, ' '),
-          location: folderName + ', CT',
+          folderName,
+          location: folderName === 'FishHoek' ? 'Fish Hoek' : `${folderName}, CT`,
           imageUrl: `/gallery/${folderName}/overview1.jpg`,
           category: 'Landscape Design',
         }));
@@ -122,7 +126,7 @@ export default function ProjectsSection() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
               className="min-w-[280px] md:min-w-[420px] flex-shrink-0 snap-start group cursor-pointer"
-              onClick={() => navigate(`/projects`)}
+              onClick={() => navigate(`/projects?project=${encodeURIComponent(project.folderName)}`)}
             >
               <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 shadow-sm">
                 <img 

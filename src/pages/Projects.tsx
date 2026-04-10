@@ -15,6 +15,7 @@ import { projectDescriptions } from '@/data/projectsData';
 
 interface Project {
   id: number;
+  folderName: string;
   title: string;
   description: string;
   location: string;
@@ -33,12 +34,22 @@ export default function Projects() {
   const location = useLocation();
   const carouselRef = useRef<HTMLDivElement>(null);
 
+  const normalizeProjectKey = (value: string) =>
+    value.toLowerCase().replace(/\s+/g, '').replace(/[-_]/g, '');
+
+  const requestedProject = new URLSearchParams(location.search).get('project');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // The canonical order of project folders to show (matches folders under public/gallery).
   const galleryFolders = [
     "Blouberg",
     "Capri",
     "Claremont",
     "Edgemead",
+    "FishHoek",
     "HarfieldVillage",
     "Hout Bay",
     "Kalk Bay",
@@ -74,6 +85,7 @@ export default function Projects() {
           const customDescription = projectDescriptions[folderName];
           return {
             id: idx + 1,
+            folderName,
             title: customDescription?.title || folderName.replace(/[-_]/g, ' '),
             description: customDescription?.description || `Project: ${folderName} — portfolio images from our work in ${folderName}.`,
             location: customDescription?.location || 'Cape Town',
@@ -83,9 +95,17 @@ export default function Projects() {
             gallery: hasFiles ? files : [],
           } as Project;
         });
+
+        const requestedIndex = requestedProject
+          ? builtProjects.findIndex(
+              (project) => normalizeProjectKey(project.folderName) === normalizeProjectKey(requestedProject)
+            )
+          : -1;
+
+        const initialIndex = requestedIndex >= 0 ? requestedIndex : 0;
         setProjects(builtProjects);
-        setActiveIndex(0);
-        setActiveProject(builtProjects[0] || null);
+        setActiveIndex(initialIndex);
+        setActiveProject(builtProjects[initialIndex] || null);
       })
       .catch((err) => {
         // fallback: build lightweight projects array with best-effort cover paths
@@ -94,6 +114,7 @@ export default function Projects() {
           const customDescription = projectDescriptions[folderName];
           return {
             id: idx + 1,
+            folderName,
             title: customDescription?.title || folderName.replace(/[-_]/g, ' '),
             description: customDescription?.description || `Project: ${folderName} — portfolio images from our work in ${folderName}.`,
             location: customDescription?.location || 'Cape Town',
@@ -104,13 +125,20 @@ export default function Projects() {
           } as Project;
         });
         if (mounted) {
+          const requestedIndex = requestedProject
+            ? fallback.findIndex(
+                (project) => normalizeProjectKey(project.folderName) === normalizeProjectKey(requestedProject)
+              )
+            : -1;
+          const initialIndex = requestedIndex >= 0 ? requestedIndex : 0;
           setProjects(fallback);
-          setActiveProject(fallback[0] || null);
+          setActiveIndex(initialIndex);
+          setActiveProject(fallback[initialIndex] || null);
         }
       });
 
     return () => { mounted = false; };
-  }, []);
+  }, [requestedProject]);
 
   useEffect(() => {
     if (projects.length === 0) return;
