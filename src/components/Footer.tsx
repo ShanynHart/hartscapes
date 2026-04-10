@@ -3,17 +3,16 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 function BarkIcon({ size = 18 }: { size?: number }) {
   return (
-    <svg
+    <img
+      src="/bark-logo.svg"
+      alt=""
       width={size}
       height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      className="rounded-sm object-cover"
       aria-hidden="true"
-    >
-      <rect width="24" height="24" rx="6" fill="#0ea5a4" />
-      <text x="12" y="16" textAnchor="middle" fontSize="12" fontWeight="700" fill="white" fontFamily="Inter, Arial, sans-serif">b</text>
-    </svg>
+      loading="lazy"
+      decoding="async"
+    />
   );
 }
 

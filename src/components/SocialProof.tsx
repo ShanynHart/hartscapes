@@ -1,4 +1,4 @@
-import { Award, Shield, Clock, Star } from "lucide-react";
+import { Award, Clock, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export default function SocialProof() {
@@ -14,11 +14,6 @@ export default function SocialProof() {
       description: "Led by Dee Hart"
     },
     {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Cape Town Based",
-      description: "Southern Suburbs & Deep South"
-    },
-    {
       icon: <Clock className="h-8 w-8" />,
       title: "Free Consultation",
       description: "No Obligation Quote"
@@ -28,7 +23,7 @@ export default function SocialProof() {
   return (
     <section className="py-12 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {badges.map((badge, index) => (
             <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-border/70 bg-white/70 backdrop-blur-sm">
               <div className="flex justify-center text-primary mb-3">

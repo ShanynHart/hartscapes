@@ -2,11 +2,43 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Leaf, Flower2 } from "lucide-react";
+import { ArrowRight, Facebook, Instagram, Leaf, Flower2 } from "lucide-react";
+
+function BarkIcon({ size = 18 }: { size?: number }) {
+  return (
+    <img
+      src="/bark-logo.svg"
+      alt=""
+      width={size}
+      height={size}
+      className="h-4 w-4 rounded-sm object-cover"
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+    />
+  );
+}
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const socialLinks = [
+    {
+      label: 'Facebook',
+      href: 'https://www.facebook.com/HartscapesLandscaping',
+      icon: <Facebook size={16} />,
+    },
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/hartscapes_landscaping/',
+      icon: <Instagram size={16} />,
+    },
+    {
+      label: 'Bark',
+      href: 'https://www.bark.com/en/za/b/hartscapes/JjEvZ/',
+      icon: <BarkIcon size={16} />,
+    },
+  ];
   
   useEffect(() => {
     const isFinePointer = window.matchMedia('(pointer: fine)').matches;
@@ -103,16 +135,25 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3 text-xs sm:text-sm">
-            <span className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-border/70 text-foreground/80 shadow-sm">
-              Owner-run in Cape Town
-            </span>
-            <span className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-border/70 text-foreground/80 shadow-sm">
-              25+ years experience
-            </span>
-            <span className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-border/70 text-foreground/80 shadow-sm">
-              Southern Suburbs &amp; Deep South
-            </span>
+          <div className="mt-6 flex flex-col items-center gap-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              Follow our work
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-white/80 px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-primary hover:text-primary-foreground"
+                  aria-label={`Hartscapes on ${link.label}`}
+                >
+                  {link.icon}
+                  <span>{link.label}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
