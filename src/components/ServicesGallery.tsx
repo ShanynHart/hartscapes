@@ -42,7 +42,7 @@ export default function ServicesGallery({ folder }: Props) {
       .catch(async () => {
         // fallback: attempt to build a few likely filenames
         const fallback: string[] = [];
-        for (let i = 1; i <= 12; i++) {
+        for (let i = 1; i <= 16; i++) {
           fallback.push(`/gallery/Services/${folder}/${i}.jpeg`);
         }
         if (mounted) {
