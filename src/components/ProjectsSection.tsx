@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, MapPin, ArrowUpRight, Plus } from "lucide-react";
+import { projectDescriptions } from '@/data/projectsData';
 
 interface Project {
   id: number;
