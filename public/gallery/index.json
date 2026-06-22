@@ -7,14 +7,14 @@
     "/gallery/Edgemead/6.jpeg",
     "/gallery/Edgemead/7.jpeg"
   ],
-  "FishHoek": [
-    "/gallery/FishHoek/1.jpeg",
-    "/gallery/FishHoek/2.jpeg",
-    "/gallery/FishHoek/3.jpeg",
-    "/gallery/FishHoek/4.jpeg",
-    "/gallery/FishHoek/5.jpeg",
-    "/gallery/FishHoek/6.jpeg",
-    "/gallery/FishHoek/7.jpeg"
+  "Fish Hoek": [
+    "/gallery/Fish Hoek/1.jpeg",
+    "/gallery/Fish Hoek/2.jpeg",
+    "/gallery/Fish Hoek/3.jpeg",
+    "/gallery/Fish Hoek/4.jpeg",
+    "/gallery/Fish Hoek/5.jpeg",
+    "/gallery/Fish Hoek/6.jpeg",
+    "/gallery/Fish Hoek/7.jpeg"
   ],
   "Blouberg": [
     "/gallery/Blouberg/1.jpeg",
@@ -249,5 +249,45 @@
     "/gallery/Services/Water Features/9.jpeg",
     "/gallery/Services/Water Features/10.jpeg",
     "/gallery/Services/Water Features/11.jpeg"
+  ],
+  "Bergvliet": [
+    "/gallery/Bergvliet/1.jpeg",
+    "/gallery/Bergvliet/2.jpeg",
+    "/gallery/Bergvliet/3.jpeg",
+    "/gallery/Bergvliet/4.jpeg",
+    "/gallery/Bergvliet/5.jpeg",
+    "/gallery/Bergvliet/6.jpeg",
+    "/gallery/Bergvliet/7.jpeg",
+    "/gallery/Bergvliet/8.jpeg",
+    "/gallery/Bergvliet/9.jpeg",
+    "/gallery/Bergvliet/10.jpeg",
+    "/gallery/Bergvliet/11.jpeg",
+    "/gallery/Bergvliet/12.jpeg",
+    "/gallery/Bergvliet/13.jpeg",
+    "/gallery/Bergvliet/14.jpeg",
+    "/gallery/Bergvliet/15.jpeg",
+    "/gallery/Bergvliet/16.jpeg",
+    "/gallery/Bergvliet/17.jpeg"
+  ],
+  "Meadowridge": [
+    "/gallery/Meadowridge/1.jpeg",
+    "/gallery/Meadowridge/2.jpeg",
+    "/gallery/Meadowridge/3.jpeg",
+    "/gallery/Meadowridge/4.jpeg",
+    "/gallery/Meadowridge/5.jpeg",
+    "/gallery/Meadowridge/6.jpeg",
+    "/gallery/Meadowridge/7.jpeg",
+    "/gallery/Meadowridge/8.jpeg",
+    "/gallery/Meadowridge/9.jpeg",
+    "/gallery/Meadowridge/10.jpeg",
+    "/gallery/Meadowridge/11.jpeg",
+    "/gallery/Meadowridge/12.jpeg",
+    "/gallery/Meadowridge/13.jpeg",
+    "/gallery/Meadowridge/14.jpeg",
+    "/gallery/Meadowridge/15.jpeg",
+    "/gallery/Meadowridge/16.jpeg",
+    "/gallery/Meadowridge/17.jpeg",
+    "/gallery/Meadowridge/18.jpeg",
+    "/gallery/Meadowridge/19.jpeg"
   ]
 }
