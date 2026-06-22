@@ -46,14 +46,16 @@ export default function Projects() {
   // The canonical order of project folders to show (matches folders under public/gallery).
   const galleryFolders = [
     "Blouberg",
+    "Bergvliet",
     "Capri",
     "Claremont",
     "Edgemead",
-    "FishHoek",
+    "Fish Hoek",
     "HarfieldVillage",
     "Hout Bay",
     "Kalk Bay",
     "Kenilworth",
+    "Meadowridge",
     "Newlands",
     "Somerset West",
     "Wynberg"

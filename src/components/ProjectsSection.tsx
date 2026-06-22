@@ -22,7 +22,7 @@ export default function ProjectsSection() {
   const { scrollXProgress } = useScroll({ container: scrollRef });
   const scaleX = useSpring(scrollXProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
-  const galleryFolders = ["Capri", "Claremont", "FishHoek", "HarfieldVillage", "Hout Bay", "Kenilworth", "Newlands", "Somerset West", "Wynberg"];
+  const galleryFolders = ["Bergvliet", "Capri", "Claremont", "Fish Hoek", "HarfieldVillage", "Hout Bay", "Kenilworth", "Meadowridge", "Newlands", "Somerset West", "Wynberg"];
 
   useEffect(() => {
     let mounted = true;
@@ -33,7 +33,8 @@ export default function ProjectsSection() {
         const built = galleryFolders.map((folderName, idx) => {
           const files = index[folderName] || [];
           const cover = files.length > 0 ? files[0] : `/gallery/${folderName}/overview1.jpg`;
-          const location = folderName === 'FishHoek' ? 'Fish Hoek' : `${folderName}, CT`;
+          const customDescription = projectDescriptions[folderName];
+          const location = customDescription?.location || `${folderName}, CT`;
           return {
             id: idx + 1,
             title: folderName.replace(/[-_]/g, ' '),
@@ -47,14 +48,18 @@ export default function ProjectsSection() {
         setProjects(built);
       })
       .catch(() => {
-        const fallback = galleryFolders.map((folderName, idx) => ({
-          id: idx + 1,
-          title: folderName.replace(/[-_]/g, ' '),
-          folderName,
-          location: folderName === 'FishHoek' ? 'Fish Hoek' : `${folderName}, CT`,
-          imageUrl: `/gallery/${folderName}/overview1.jpg`,
-          category: 'Landscape Design',
-        }));
+        const fallback = galleryFolders.map((folderName, idx) => {
+          const customDescription = projectDescriptions[folderName];
+          const location = customDescription?.location || `${folderName}, CT`;
+          return {
+            id: idx + 1,
+            title: folderName.replace(/[-_]/g, ' '),
+            folderName,
+            location,
+            imageUrl: `/gallery/${folderName}/overview1.jpg`,
+            category: 'Landscape Design',
+          };
+        });
         if (mounted) setProjects(fallback);
       });
     return () => { mounted = false; };

@@ -21,7 +21,7 @@ Freshly repaved pool surrounds matched with premium ceramic outdoor tiling in th
     location: "Cape Town",
     year: "2026",
   },
-  "FishHoek": {
+  "Fish Hoek": {
     title: "Fish Hoek",
     description: `A curbside retaining wall designed to prevent landslide movement while creating a strong, tidy edge for the property.
 
