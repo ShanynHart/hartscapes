@@ -81,7 +81,10 @@ export default function Projects() {
       .then((index: Record<string, string[]>) => {
         if (!mounted) return;
         const builtProjects: Project[] = galleryFolders.map((folderName, idx) => {
-          const files = index[folderName] || [];
+          const indexKey = Object.keys(index).find(
+            (key) => normalizeProjectKey(key) === normalizeProjectKey(folderName)
+          );
+          const files = indexKey ? index[indexKey] || [] : [];
           const hasFiles = files.length > 0;
           const imageUrl = hasFiles ? files[0] : PLACEHOLDER_SVG;
           const customDescription = projectDescriptions[folderName];

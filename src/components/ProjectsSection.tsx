@@ -32,7 +32,10 @@ export default function ProjectsSection() {
       .then((index: Record<string, string[]>) => {
         if (!mounted) return;
         const built = galleryFolders.map((folderName, idx) => {
-          const files = index[folderName] || [];
+          const indexKey = Object.keys(index).find(
+            (key) => key.toLowerCase().replace(/\s+/g, '').replace(/[-_]/g, '') === folderName.toLowerCase().replace(/\s+/g, '').replace(/[-_]/g, '')
+          );
+          const files = indexKey ? index[indexKey] || [] : [];
           const cover = files.length > 0 ? files[0] : `/gallery/${folderName}/overview1.jpg`;
           const customDescription = projectDescriptions[folderName];
           const location = customDescription?.location || `${folderName}, CT`;
