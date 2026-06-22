@@ -194,6 +194,7 @@ Festoon lights create an inviting ambiance for both daytime entertaining and eve
 
 The result is a sophisticated outdoor room that seamlessly transitions from a midday swimming retreat to an evening dining destination.`,
     location: "Cape Town",
+    year: "2026",
   },
   "Bergvliet": {
     title: "Bergvliet",
@@ -219,5 +220,6 @@ From initial concept through final planting, we managed every aspect of the tran
 
 This project showcases our commitment to creating outdoor spaces that families can truly use, enjoy, and benefit from year-round.`,
     location: "Cape Town",
+    year: "2026",
   },
 };
