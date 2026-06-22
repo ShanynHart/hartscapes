@@ -14,23 +14,39 @@ export default function ServicesGallery({ folder }: Props) {
   useEffect(() => {
     let mounted = true;
     setLoading(true);
+
+    const verifyImage = (src: string) =>
+      new Promise<boolean>((resolve) => {
+        const image = new window.Image();
+        image.onload = () => resolve(true);
+        image.onerror = () => resolve(false);
+        image.src = src;
+      });
+
+    const loadImages = async (sources: string[]) => {
+      const verified = await Promise.all(
+        sources.map(async (src) => (await verifyImage(src)) ? src : null)
+      );
+      return verified.filter((src): src is string => Boolean(src));
+    };
+
     fetch('/gallery/index.json')
       .then((res) => res.ok ? res.json() : Promise.reject())
-      .then((index: Record<string, string[]>) => {
+      .then(async (index: Record<string, string[]>) => {
         if (!mounted) return;
         const key = `Services/${folder}`;
         const arr = index[key] || [];
-        setImages(arr);
+        setImages(await loadImages(arr));
         setLoading(false);
       })
-      .catch(() => {
+      .catch(async () => {
         // fallback: attempt to build a few likely filenames
         const fallback: string[] = [];
         for (let i = 1; i <= 12; i++) {
           fallback.push(`/gallery/Services/${folder}/${i}.jpeg`);
         }
         if (mounted) {
-          setImages(fallback);
+          setImages(await loadImages(fallback));
           setLoading(false);
         }
       });
