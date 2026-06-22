@@ -61,7 +61,7 @@ export default function AboutSection() {
 
   const beforeAfterImages = useState(() =>
     shuffleArray(
-      Array.from({ length: 29 }, (_, i) => ({
+      Array.from({ length: 53 }, (_, i) => ({
         id: i + 1,
         src: `/gallery/BeforeAfter/${i + 1}.png`,
         alt: `Transformation ${i + 1}`

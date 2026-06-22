@@ -168,4 +168,56 @@ Designed to complement the terrain and create natural boundaries between spaces.
 Now this family has a garden that grows with them—ground-level fun, treetop retreats, and endless memories waiting to be made. 💚`,
     location: "Cape Town",
   },
+  "Meadowridge": {
+    title: "Meadowridge",
+    description: `This Meadowridge retreat exemplifies thoughtful design principles. We transformed a cluttered outdoor space into a calm, cohesive sanctuary.
+
+Key Design Elements:
+
+✓ Large-format Bluestone Paving
+Cool, modern tones create a sophisticated foundation for the entire space.
+
+✓ Coffee-Brown Accent Walls
+Rich, warm walls provide visual depth and structure to the outdoor room.
+
+✓ Structured Planting Plan
+Carefully selected plantings add life and movement while requiring minimal maintenance.
+
+✓ Timber Fencing
+Warm timber elements enhance the welcoming atmosphere throughout the pool area.
+
+✓ Built-in Fire Pit
+Integrated fire feature extends the usability of the space from day into evening.
+
+✓ Ambient Lighting
+Festoon lights create an inviting ambiance for both daytime entertaining and evening relaxation.
+
+The result is a sophisticated outdoor room that seamlessly transitions from a midday swimming retreat to an evening dining destination.`,
+    location: "Cape Town",
+  },
+  "Bergvliet": {
+    title: "Bergvliet",
+    description: `Many homeowners inherit outdoor spaces with tremendous potential but feel overwhelmed by the complexity. This Bergvliet project demonstrates how comprehensive landscaping planning and execution transforms that potential into everyday reality.
+
+Our Approach:
+
+We handled all aspects of this transformation, including design, paving, planting, pond installation, vegetable beds, irrigation systems, and extensive site work.
+
+What We Achieved:
+
+✓ Careful Master Planning
+Every element was thoughtfully positioned to create cohesion and flow throughout the garden.
+
+✓ Skilled Installation
+Expert hands executed each phase with precision and attention to detail.
+
+✓ Family-Focused Design
+The result is a multi-functional space that the entire family actively uses and enjoys.
+
+✓ Comprehensive Services
+From initial concept through final planting, we managed every aspect of the transformation.
+
+This project showcases our commitment to creating outdoor spaces that families can truly use, enjoy, and benefit from year-round.`,
+    location: "Cape Town",
+  },
 };
