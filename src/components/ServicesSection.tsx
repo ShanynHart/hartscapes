@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { services } from "@/data/servicesData";
-import { 
-  Trees, Axis3d, Droplets, Waves, Flame, 
-  Mountain, Home, Grid3x3, BoxSelect, ArrowUpRight 
+import {
+  Trees, Axis3d, Droplets, Waves, Flame,
+  Mountain, Home, Grid3x3, BoxSelect, Fence,
+  Sprout, Pizza, ArrowUpRight
 } from "lucide-react";
 
 // Icons sized up slightly for the larger cards
@@ -19,6 +20,9 @@ const iconsMap: Record<string, JSX.Element> = {
   Home: <Home size={22} />,
   Grid3x3: <Grid3x3 size={22} />,
   BoxSelect: <BoxSelect size={22} />,
+  Fence: <Fence size={22} />,
+  Sprout: <Sprout size={22} />,
+  Pizza: <Pizza size={22} />,
 };
 
 export default function ServicesSection() {

@@ -11,6 +11,7 @@ import BackToTop from '@/components/BackToTop';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from '@/components/ui/use-toast';
+import { usePageMeta } from '@/hooks/usePageMeta';
 import { projectDescriptions } from '@/data/projectsData';
 
 interface Project {
@@ -26,6 +27,11 @@ interface Project {
 }
 
 export default function Projects() {
+  usePageMeta(
+    'Our Projects | Hartscapes Landscaping Cape Town',
+    'Browse completed Hartscapes landscaping projects across Cape Town — garden transformations, fencing, decking, paving and full outdoor renovations.',
+    '/projects'
+  );
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [projects, setProjects] = useState<Project[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);

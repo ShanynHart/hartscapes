@@ -1,4 +1,5 @@
-{"Edgemead": [
+{
+  "Edgemead": [
     "/gallery/Edgemead/1.jpeg",
     "/gallery/Edgemead/2.jpeg",
     "/gallery/Edgemead/3.jpeg",
@@ -81,7 +82,7 @@
     "/gallery/Kalk Bay/3.jpeg",
     "/gallery/Kalk Bay/4.jpeg"
   ],
-  "Claremont":[
+  "Claremont": [
     "/gallery/Claremont/1.jpeg",
     "/gallery/Claremont/2.jpeg",
     "/gallery/Claremont/3.jpeg",
@@ -171,7 +172,9 @@
     "/gallery/Services/Fencing/9.jpeg",
     "/gallery/Services/Fencing/10.jpeg",
     "/gallery/Services/Fencing/11.jpeg",
-    "/gallery/Services/Fencing/12.jpeg"
+    "/gallery/Services/Fencing/12.jpeg",
+    "/gallery/Services/Fencing/13.jpeg",
+    "/gallery/Services/Fencing/14.jpeg"
   ],
   "Services/Fire Pits": [
     "/gallery/Services/Fire Pits/1.jpeg",

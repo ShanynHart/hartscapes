@@ -3,9 +3,19 @@ import { useParams } from "react-router-dom";
 import { serviceComponents } from "./serviceComponents";
 import NotFound from "./NotFound";
 import ServiceNav from '@/components/ServiceNav';
+import { services } from '@/data/servicesData';
+import { usePageMeta } from '@/hooks/usePageMeta';
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug?: string }>();
+  const service = services.find((s) => s.slug === slug);
+  usePageMeta(
+    service ? `${service.title} Cape Town | Hartscapes` : 'Services | Hartscapes',
+    service
+      ? `${service.description} Professional installation by Hartscapes in Cape Town's Southern Suburbs and Deep South.`
+      : 'Landscaping services by Hartscapes in Cape Town.',
+    service ? `/services/${service.slug}` : '/services'
+  );
   const [Component, setComponent] = useState<null | React.ComponentType>(null);
   const [loading, setLoading] = useState(true);
 

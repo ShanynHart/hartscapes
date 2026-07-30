@@ -11,6 +11,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import BackToTop from '@/components/BackToTop';
 import SocialProof from '@/components/SocialProof';
+import { usePageMeta } from '@/hooks/usePageMeta';
 
 const testimonials = [
   {
@@ -93,6 +94,12 @@ const testimonials = [
 export default function Services() {
   const navigate = useNavigate();
   const location = useLocation();
+
+  usePageMeta(
+    'Landscaping Services Cape Town | Hartscapes',
+    'Landscape design, fencing, decking, paving, artificial lawns, water features and more — expert landscaping services in Cape Town by Hartscapes.',
+    '/services'
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -28,7 +28,7 @@ export default function TransformationsSection() {
     shuffleArray(
       Array.from({ length: 29 }, (_, index) => ({
         id: index + 1,
-        src: `/gallery/BeforeAfter/${index + 1}.png`,
+        src: `/gallery/BeforeAfter/${index + 1}.jpg`,
         alt: `Transformation ${index + 1}`,
       }))
     )

@@ -12,9 +12,16 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import BackToTop from '@/components/BackToTop';
 import SocialProof from '@/components/SocialProof';
+import { usePageMeta } from '@/hooks/usePageMeta';
 
 const Index = () => {
   const contentRef = useRef<HTMLDivElement>(null);
+
+  usePageMeta(
+    'Hartscapes — Landscaping & Garden Design Cape Town',
+    'Owner-run landscaping company in Cape Town. Landscape design, fencing, decking, paving, pergolas, water features and garden transformations by Dee Hart and team.',
+    '/'
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);

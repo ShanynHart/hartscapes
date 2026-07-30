@@ -63,7 +63,7 @@ export default function AboutSection() {
     shuffleArray(
       Array.from({ length: 53 }, (_, i) => ({
         id: i + 1,
-        src: `/gallery/BeforeAfter/${i + 1}.png`,
+        src: `/gallery/BeforeAfter/${i + 1}.jpg`,
         alt: `Transformation ${i + 1}`
       }))
     )

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackToTop from "@/components/BackToTop";
 import { useLocation, useNavigate } from "react-router-dom";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -29,6 +30,12 @@ const staggerContainer = {
 const About = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  usePageMeta(
+    'About Us | Hartscapes Landscaping Cape Town',
+    'Meet Dee Hart and the Hartscapes team — an owner-run Cape Town landscaping company with 25+ years of garden design and construction experience.',
+    '/about'
+  );
 
   useEffect(() => {
     const target = window.location.hash === '#our-philosophy'
