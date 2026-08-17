@@ -165,8 +165,8 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a href="mailto:dee.hartscapes@gmail.com" className="hover:text-white transition-colors duration-300">
-                  dee.hartscapes@gmail.com
+                <a href="mailto:Dee@hartscapes.co.za" className="hover:text-white transition-colors duration-300">
+                  Dee@hartscapes.co.za
                 </a>
               </p>
               <p>Mon - Fri: 8am - 5pm</p>
