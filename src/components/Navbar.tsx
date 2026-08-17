@@ -92,7 +92,7 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center gap-2" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
           <img 
-            src="/lovable-uploads/logo.png" 
+            src="/branding/logo.png" 
             alt="Hartscapes Logo" 
             loading="eager"
             decoding="async"

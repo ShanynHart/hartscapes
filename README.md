@@ -1,73 +1,47 @@
-# Welcome to your Lovable project
+# Hartscapes
 
-## Project info
+Marketing website for [Hartscapes](https://hartscapes.co.za), an owner-run landscaping company in Cape Town, South Africa. Built for a real client (my mom's business) and serving real customers — the site showcases 11 landscaping services, a photo portfolio of completed projects across Cape Town, before/after transformations, and client testimonials.
 
-**URL**: https://lovable.dev/projects/f975d144-e4a6-4bc5-9873-3fee12c2d121
+**Live site:** [hartscapes.co.za](https://hartscapes.co.za)
 
-## How can I edit this code?
+## Tech stack
 
-There are several ways of editing your application.
+- **React 18 + TypeScript** on **Vite**
+- **Tailwind CSS** with **shadcn/ui** (Radix primitives) for the component library
+- **Framer Motion** for scroll and entrance animations
+- **React Router** for client-side routing, with per-page SEO meta (titles, descriptions, Open Graph, canonical URLs) managed by a small custom hook
+- **Embla Carousel** for the project and testimonial carousels
+- Deployed on **Vercel** with SPA rewrites
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f975d144-e4a6-4bc5-9873-3fee12c2d121) and start prompting.
+- **Service pages** — 11 services (fencing, decking, paving, artificial lawns, water features, and more), each with its own gallery, FAQ accordion, and call-to-action, generated from a single data file and lazy-loaded per route
+- **Project portfolio** — galleries for 14 completed projects, driven by a build-time `index.json` manifest so new photos can be added without code changes
+- **Before/after showcase** — shuffled carousel of 53 garden transformations
+- **Lightbox galleries** with keyboard navigation
+- **SEO** — unique meta per route, `sitemap.xml`, structured robots.txt
+- **Performance** — all gallery images optimized (resized and recompressed, 422 MB → 94 MB), lazy loading throughout
+- **WhatsApp integration** for direct customer enquiries
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev     # dev server on http://localhost:8080
+npm run build   # production build
+npm run lint
 ```
 
-**Edit a file directly in GitHub**
+## Project structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f975d144-e4a6-4bc5-9873-3fee12c2d121) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+src/
+  components/     # shared UI (navbar, footer, galleries, sections)
+  components/ui/  # shadcn/ui primitives
+  data/           # services and project content
+  hooks/          # usePageMeta (SEO), utilities
+  pages/          # routes
+  pages/services/ # one component per service page
+public/
+  gallery/        # photo galleries + index.json manifest
+```

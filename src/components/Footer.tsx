@@ -64,7 +64,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img 
-                src="/lovable-uploads/logo.png" 
+                src="/branding/logo.png" 
                 alt="Hartscapes Logo" 
                 loading="lazy"
                 decoding="async"
