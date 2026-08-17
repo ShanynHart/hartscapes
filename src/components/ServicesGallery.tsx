@@ -5,6 +5,21 @@ interface Props {
   folder: string; // e.g. 'Decking' -> looks up 'Services/Decking' in index.json
 }
 
+// Descriptive alt-text phrases per gallery folder (accessibility + image SEO)
+const altPhrases: Record<string, string> = {
+  'Artificial Lawns': 'Artificial lawn installed by Hartscapes in a Cape Town garden',
+  'Brickwork': 'Brickwork and masonry by Hartscapes in Cape Town',
+  'Decking': 'Timber deck built by Hartscapes in Cape Town',
+  'Fencing': 'Timber fencing installed by Hartscapes in Cape Town',
+  'Fire Pits': 'Outdoor firepit and braai area built by Hartscapes in Cape Town',
+  'Gardens': 'Garden designed and landscaped by Hartscapes in Cape Town',
+  'Paving': 'Paved driveway and walkway by Hartscapes in Cape Town',
+  'Pergolas': 'Timber pergola built by Hartscapes in Cape Town',
+  'Pizza Ovens': 'Wood-fired pizza oven installed by Hartscapes in Cape Town',
+  'Retaining Walls': 'Retaining wall built by Hartscapes in Cape Town',
+  'Water Features': 'Garden water feature installed by Hartscapes in Cape Town',
+};
+
 export default function ServicesGallery({ folder }: Props) {
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
@@ -87,7 +102,7 @@ export default function ServicesGallery({ folder }: Props) {
             >
               <img
                 src={img}
-                alt={`${folder} ${i + 1}`}
+                alt={`${altPhrases[folder] ?? folder} — photo ${i + 1}`}
                 className="w-full h-auto object-contain group-hover:opacity-90 transition-opacity"
                 loading="lazy"
               />

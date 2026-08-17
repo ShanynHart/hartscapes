@@ -29,7 +29,7 @@ export default function TransformationsSection() {
       Array.from({ length: 66 }, (_, index) => ({
         id: index + 1,
         src: `/gallery/BeforeAfter/${index + 1}.jpg`,
-        alt: `Transformation ${index + 1}`,
+        alt: `Before and after garden transformation by Hartscapes, Cape Town — project ${index + 1}`,
       }))
     )
   )[0];

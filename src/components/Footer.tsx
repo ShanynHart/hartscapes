@@ -182,7 +182,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://www.facebook.com/hartscapes" 
+                href="https://www.facebook.com/HartscapesLandscaping" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -191,7 +191,7 @@ export default function Footer() {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://www.instagram.com/hartscapes" 
+                href="https://www.instagram.com/hartscapes_landscaping/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300"

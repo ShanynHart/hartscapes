@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock, Users, Loader2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { services } from "@/data/servicesData";
 
 export default function ContactSection() {
   const formEndpoint = 'https://formspree.io/f/meelkrwz';
@@ -16,10 +17,12 @@ export default function ContactSection() {
     name: '',
     email: '',
     phone: '',
+    suburb: '',
+    service: '',
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error when user starts typing
@@ -87,6 +90,8 @@ export default function ContactSection() {
         name: '',
         email: '',
         phone: '',
+        suburb: '',
+        service: '',
         message: ''
       });
       setErrors({});
@@ -251,19 +256,54 @@ export default function ContactSection() {
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium">
-                      Phone
-                    </label>
-                    <Input 
-                      id="phone" 
-                      name="phone" 
-                      placeholder="Your phone number" 
-                      value={formData.phone} 
-                      onChange={handleChange} 
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="text-sm font-medium">
+                        Phone
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        placeholder="Your phone number"
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="suburb" className="text-sm font-medium">
+                        Suburb
+                      </label>
+                      <Input
+                        id="suburb"
+                        name="suburb"
+                        placeholder="e.g. Fish Hoek, Newlands"
+                        value={formData.suburb}
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
-                  
+
+                  <div className="space-y-2">
+                    <label htmlFor="service" className="text-sm font-medium">
+                      Service needed
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">Not sure yet / general enquiry</option>
+                      {services.map((s) => (
+                        <option key={s.slug} value={s.title}>{s.title}</option>
+                      ))}
+                      <option value="Garden maintenance">Garden maintenance</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
                       Message <span className="text-destructive">*</span>

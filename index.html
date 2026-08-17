@@ -23,12 +23,55 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <!-- Apple touch icon -->
   <link rel="apple-touch-icon" href="/branding/logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Hartscapes",
+    "description": "Owner-run landscaping company in Cape Town: landscape design, fencing, decking, paving, pergolas, artificial lawns, water features and garden transformations.",
+    "url": "https://hartscapes.co.za",
+    "telephone": "+27-82-292-3908",
+    "image": "https://hartscapes.co.za/gallery/team.png",
+    "logo": "https://hartscapes.co.za/branding/logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Dee Hart"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cape Town",
+      "addressRegion": "Western Cape",
+      "addressCountry": "ZA"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Cape Town Southern Suburbs" },
+      { "@type": "Place", "name": "Cape Town Deep South" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/HartscapesLandscaping",
+      "https://www.instagram.com/hartscapes_landscaping/"
+    ]
+  }
+  </script>
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
