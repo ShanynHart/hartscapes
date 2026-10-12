@@ -2,6 +2,16 @@
 // Sources: Facebook and Google reviews, Bark and Best Thing Ever.
 export const testimonials = [
   {
+    quote: "She transformed my vision of my garden and even better than what I imagined, while sticking within my budget. Neat workers too! Highly recommend",
+    author: "Carmen W.",
+    location: "Cape Town"
+  },
+  {
+    quote: "Dee and her team recently redid our garden retaining wall and built us a pergola and veggie planters and she was a pleasure to work with overall. She was friendly and accommodating and her and her team happily worked within our very vague brief and helped to guide the solution to a beautiful end result, thank you!",
+    author: "Tharaa E.",
+    location: "Cape Town"
+  },
+  {
     quote: "Had an awesome experience getting my garden looking beautiful with the help of Dee and her Team. Easy, professional and great service. Highly recommended",
     author: "Richard T.",
     location: "Cape Town"
