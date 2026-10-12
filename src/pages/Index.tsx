@@ -12,6 +12,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import BackToTop from '@/components/BackToTop';
 import SocialProof from '@/components/SocialProof';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import { usePageMeta } from '@/hooks/usePageMeta';
 
 const Index = () => {
@@ -58,6 +59,7 @@ const Index = () => {
         <ServicesSection />
         <SocialProof />
         <ProjectsSection />
+        <TestimonialsSection />
         <AboutSection />
         <ContactSection />
         <Footer />
