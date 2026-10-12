@@ -83,7 +83,7 @@ export default function HeroSection() {
           <div className="animate-float mb-4 inline-block">
             <div className="bg-primary/10 text-primary px-4 py-2 rounded-full inline-flex items-center gap-2 shadow-sm">
               <Leaf size={16} className="animate-leaf-wave" />
-              <span>Premier Landscaping in South Africa</span>
+              <span>Premier Landscaping in Cape Town</span>
             </div>
           </div>
           

@@ -183,7 +183,7 @@ export default function AboutSection() {
                   dedicated to transforming outdoor spaces with over 25 years of landscape and garden design experience.
                 </p>
                 <p>
-                  𝗪𝗲 𝘀𝗽𝗲𝗰𝗶𝗮𝗹𝗶𝘇𝗲 𝗶𝗻 𝗯𝗲𝘀𝗽𝗼𝗸𝗲 𝗵𝗮𝗿𝗱𝘀𝗰𝗮𝗽𝗶𝗻𝗴, 𝘀𝘁𝗼𝗻𝗲 𝗺𝗮𝘀𝗼𝗻𝗿𝘆, 𝗮𝗻𝗱 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗴𝗮𝗿𝗱𝗲𝗻 𝘁𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻𝘀. 𝗙𝗿𝗼𝗺 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗲𝗱 𝘁𝗶𝗲𝗿𝗲𝗱 𝗹𝗮𝗻𝗱𝘀𝗰𝗮𝗽𝗲𝘀 𝘁𝗼 𝗹𝘂𝘅𝘂𝗿𝘆 𝗼𝘂𝘁𝗱𝗼𝗼𝗿 𝗹𝗶𝘃𝗶𝗻𝗴 𝘀𝗽𝗮𝗰𝗲𝘀, 𝘄𝗲 𝗰𝗿𝗲𝗮𝘁𝗲 𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲𝗱, 𝘀𝘂𝘀𝘁𝗮𝗶𝗻𝗮𝗯𝗹𝗲 𝗲𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁𝘀 𝘁𝗮𝗶𝗹𝗼𝗿𝗲𝗱 𝘁𝗼 𝘁𝗵𝗲 𝘂𝗻𝗶𝘅𝘂𝗲 𝗦𝗼𝘂𝘁𝗵 𝗔𝗳𝗿𝗶𝗰𝗮𝗻 𝘁𝗲𝗿𝗿𝗮𝗶𝗻.
+                  We specialize in bespoke hardscaping, stone masonry, and complete garden transformations. From engineered tiered landscapes to luxury outdoor living spaces, we create structured, sustainable environments tailored to the unique South African terrain.
                 </p>
               </div>
 

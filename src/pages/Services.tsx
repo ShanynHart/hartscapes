@@ -15,12 +15,37 @@ import { usePageMeta } from '@/hooks/usePageMeta';
 
 const testimonials = [
   {
+    quote: "Had an awesome experience getting my garden looking beautiful with the help of Dee and her Team. Easy, professional and great service. Highly recommended",
+    author: "Richard T.",
+    location: "Cape Town"
+  },
+  {
+    quote: "I cannot recommend Dee and the Hartscapes team highly enough. They did an amazing job on both my front and back gardens and left me with a wonderful zen retreat. They are a highly skilled and detail-conscious team and I would use them again in a ...Hart...beat. Thank you for everything!",
+    author: "Lindsay D.",
+    location: "Cape Town"
+  },
+  {
+    quote: "What an excellent team! Diligent, caring and super experts on all things landscape with always the customer's best interests at heart.",
+    author: "Vivian V.",
+    location: "Cape Town"
+  },
+  {
+    quote: "Hartscapes did an amazing job on our garden, we can highly recommend Dee and her team!!!!",
+    author: "Guy H.",
+    location: "Cape Town"
+  },
+  {
+    quote: "Not too long ago we realised our wooden deck needed some attention. Based on previous experience, we knew that it would be a battle to find someone to take on the job. New decks - yes! But repairs are a job many companies seem to avoid. It was such a relief when Deanne Hart of Hartscapes agreed to do the job. She, and her team who were her eyes on the ground, immersed herself in the project. In every way - even when bad weather complicated matters - she went the extra mile. I value her expertise and trust her completely.",
+    author: "Arddy M.",
+    location: "Cape Town"
+  },
+  {
     quote: "Very happy with the refurbishment of a sad and thirsty timber fence and some serious pruning. Dee and her team are professional, friendly and focused. Highly recommended.",
     author: "Bridget L.",
     location: "Cape Town"
   },
   {
-    quote: "Dee and her team completely renovated my garden. Excellent service and lovely ideas. I can't wait to see my plants flowering!",
+    quote: "Dee and her team completely renovated my garden. Excellent service and lovely ideas. I can't wait to see my plants flowering.",
     author: "Marianne E.",
     location: "Cape Town"
   },
