@@ -25,6 +25,11 @@ const testimonials = [
     location: "Cape Town"
   },
   {
+    quote: "If you are looking to landscape your garden in the New Year I suggest you look no further. Dee and her team did an amazing job with our garden. She worked within our budget and had some excellent ideas to re-imagine the entire space.",
+    author: "Lindsay F.",
+    location: "Cape Town"
+  },
+  {
     quote: "What an excellent team! Diligent, caring and super experts on all things landscape with always the customer's best interests at heart.",
     author: "Vivian V.",
     location: "Cape Town"
